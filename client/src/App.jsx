@@ -1,8 +1,9 @@
 import { useState, useEffect, useRef } from 'react'
 import axios from 'axios'
 import './App.css'
+import About from './About.jsx'
 import { Routes, Route, Link, } from 'react-router-dom';
-import { ChevronLeft } from "lucide-react";
+import { ChevronLeft, Info } from "lucide-react";
 
 function Home() {
   return (
@@ -224,9 +225,20 @@ function ImagePageBase() {
                 <div className="flex flex-col gap-3">
 
                   <section className="flex flex-col gap-3 rounded-lg border border-(--border) bg-(--bg-secondary) p-3">
-                    <div className="flex items-center gap-2">
-                      <span className="h-2 w-2 rounded-full bg-(--accent)"></span>
-                      <h4 className="font-semibold relative text-(--text-primary)">Gaussian Blur</h4>
+                    <div className="flex items-center gap-2 relative group">
+                      <span className="h-2 w-2 rounded-full bg-(--accent) "></span>
+                      <h4 className="font-semibold relative text-(--text-primary) ">Gaussian Blur</h4>
+                      <div className="relative">
+                        <Info className="w-4 h-4 text-(--text-muted)"/>
+                        <div className="absolute translate-x-[-20%] bottom-full  w-64  flex items-center gap-1 opacity-0 invisible 
+                          group-hover:opacity-100 group-hover:visible  transition-opacity duration-200
+                          group-focus-within:opacity-100 group-focus-within:visible
+                          bg-(--bg-secondary) border border-(--border) rounded-lg p-2 text-(--text-primary) text-xs z-10">
+                          <span className="text-xs text-(--text-muted)">Smooths an image by reducing detail and noise.
+                                                                        Larger kernel sizes create a stronger blur.</span>
+                        </div>
+                      </div>
+                      
                     </div>
                     <div className="flex flex-col gap-2">
                       <label className="text-sm text-(--text-secondary)">Kernel Size</label>
@@ -240,9 +252,21 @@ function ImagePageBase() {
                   </section>
 
                   <section className="flex flex-col gap-3 rounded-lg border border-(--border) bg-(--bg-secondary) p-3">
-                    <div className="flex items-center gap-2">
-                      <span className="h-2 w-2 rounded-full bg-(--accent)"></span>
-                      <h4 className="font-semibold relative text-(--text-primary)">Median Blur</h4>
+                    <div className="flex items-center gap-2 relative group">
+                      <span className="h-2 w-2 rounded-full bg-(--accent) "></span>
+                      <h4 className="font-semibold relative text-(--text-primary) ">Median Blur</h4>
+                      <div className="relative">
+                        <button type="button" className=" " aria-label="Info">
+                          <Info className="w-4 h-4 text-(--text-muted)"/>
+                        </button>
+                        <div className="absolute translate-x-[-20%] bottom-full  w-64  flex items-center gap-1 opacity-0 invisible 
+                          group-hover:opacity-100 group-hover:visible  transition-opacity duration-200
+                          group-focus-within:opacity-100 group-focus-within:visible
+                          bg-(--bg-secondary) border border-(--border) rounded-lg p-2 text-(--text-primary) text-xs z-10">
+                          <span className="text-xs text-(--text-muted)">Removes small noise and isolated pixels by replacing each pixel with the median value of its surrounding neighborhood. Particularly useful for salt-and-pepper noise.</span>
+                        </div>
+                      </div>
+                      
                     </div>
                     <div className="flex flex-col gap-2">
                     
@@ -259,9 +283,21 @@ function ImagePageBase() {
                   </section>
 
                   <section className="flex flex-col gap-3 rounded-lg border border-(--border) bg-(--bg-secondary) p-3">
-                    <div className="flex items-center gap-2">
-                      <span className="h-2 w-2 rounded-full bg-(--accent)"></span>
-                      <h4 className="font-semibold relative text-(--text-primary)">Bilateral Filter</h4>
+                    <div className="flex items-center gap-2 relative group">
+                      <span className="h-2 w-2 rounded-full bg-(--accent) "></span>
+                      <h4 className="font-semibold relative text-(--text-primary) ">Bilateral Filter</h4>
+                      <div className="relative">
+                        <button type="button" className="" aria-label="Info">
+                          <Info className="w-4 h-4 text-(--text-muted)"/>
+                        </button>
+                        <div className="absolute translate-x-[-20%] bottom-full  w-64  flex items-center gap-1 opacity-0 invisible 
+                          group-hover:opacity-100 group-hover:visible  transition-opacity duration-200
+                          group-focus-within:opacity-100 group-focus-within:visible
+                          bg-(--bg-secondary) border border-(--border) rounded-lg p-2 text-(--text-primary) text-xs z-10">
+                          <span className="text-xs text-(--text-muted)">Reduces noise while preserving edges. Unlike ordinary blurring, it considers both pixel distance and color similarity.</span>
+                        </div>
+                      </div>
+                      
                     </div>
 
                     <div className="flex flex-col gap-3">
@@ -298,9 +334,21 @@ function ImagePageBase() {
                   </section>
 
                   <section className="flex flex-col gap-3 rounded-lg border border-(--border) bg-(--bg-secondary) p-3">
-                    <div className="flex items-center gap-2">
-                      <span className="h-2 w-2 rounded-full bg-(--accent)"></span>
-                      <h4 className="font-semibold relative text-(--text-primary)">Canny Filter</h4>
+                    <div className="flex items-center gap-2 relative group">
+                      <span className="h-2 w-2 rounded-full bg-(--accent) "></span>
+                      <h4 className="font-semibold relative text-(--text-primary) ">Canny Filter</h4>
+                      <div className="relative">
+                        <button type="button" className="" aria-label="Info">
+                          <Info className="w-4 h-4 text-(--text-muted)"/>
+                        </button>
+                        <div className="absolute translate-x-[-20%] bottom-full  w-64  flex items-center gap-1 opacity-0 invisible 
+                          group-hover:opacity-100 group-hover:visible  transition-opacity duration-200
+                          group-focus-within:opacity-100 group-focus-within:visible
+                          bg-(--bg-secondary) border border-(--border) rounded-lg p-2 text-(--text-primary) text-xs z-10">
+                          <span className="text-xs text-(--text-muted)">Detects edges by identifying strong changes in image intensity. Lower and upper thresholds control which edges are retained.</span>
+                        </div>
+                      </div>
+                      
                     </div>
 
                     <div className="flex flex-col gap-3">
@@ -342,10 +390,13 @@ function App() {
         <section id="header">
           <div className="w-full  bg-(--bg-primary)  text-xl text-(--text-primary) border-b-2 border-(--border)">
             <div className='w-[90%] p-2.5 mx-auto flex flex-row items-center justify-between '>
-              <Link to="/" className='text-2xl hover:underline'>CarlVision</Link>
-              <div className="w-[20%]  flex gap-3">
-                <label className="hover:underline">More from Us</label>
-                <label className="hover:underline">About Us</label>
+              <Link to="/" className="relative group text-2xl">
+                    CarlVision<span className="absolute bottom-0 left-0 w-full h-0.5 scale-x-0 origin-center bg-(--accent) transition-transform duration-200 group-hover:scale-x-100" />
+                  </Link>
+              <div className="">
+                <Link to="/about" className="relative group text-xl">
+                    About CarlVision<span className="absolute bottom-0 left-0 w-full h-0.5 scale-x-0 origin-center bg-(--accent) transition-transform duration-200 group-hover:scale-x-100" />
+                  </Link>
               </div>
 
             </div>
@@ -356,6 +407,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home/>}/>
             <Route path="/app" element={<ImagePageBase/>}/>
+            <Route path="/about" element={<About/>}/>
           </Routes>
         </section>
 
