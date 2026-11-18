@@ -1,25 +1,28 @@
 # OpenCV-demo-py-react
+
 Only version 1, and I'm proud to say more is coming in future development.
 
 I wanted to blend my Python skills with my years of experience with OpenCV and see how well they get along with my web development skills.
 
 ## Simple overview
+
 I wanted to make this project to give people with minimal experience in computer vision a chance to understand what and how computers see and interact with the information given to them.
 
 This project is aimed toward people who struggle with OpenCV documentation, prefer a more hands-on experience, or want to test out aspects of image processing that they haven't been able to before.
 
 Fit into any of these? Well, **WELCOME!**
 
-## Current Features: 
- - Image Uploading
- - Gaussian blur
- - Median blur
- - Bilateral filtering
- - Canny edge detection
- - Threshold Configuration
- - Dynamic filter Configuration
- - OpenCV image processing
- - More to come in later versions!
+## Current Features
+
+- Image Uploading
+- Gaussian blur
+- Median blur
+- Bilateral filtering
+- Canny edge detection
+- Threshold Configuration
+- Dynamic filter Configuration
+- OpenCV image processing
+- More to come in later versions!
 
 ## Future Improvements
 
@@ -32,18 +35,21 @@ Fit into any of these? Well, **WELCOME!**
 ## Technologies
 
 ### Frontend
+
 - React
 - Vite
 - Tailwind CSS
 - Axios
 
 ### Backend
+
 - Python
 - Flask
 - OpenCV
 - NumPy
 
 ## How This Works
+
 1. The user selects an image in the React frontend.
 2. The image and processing configuration are sent to the Flask API.
 3. Flask decodes the image using OpenCV.
@@ -61,8 +67,8 @@ Fit into any of these? Well, **WELCOME!**
 6. Submit the image.
 7. View the processed result.
 
-
 ## Some notable experiences I gained while writing this code
+
 - Connecting a React frontend to a Python backend.
 - Sending images and configuration data using FormData.
 - Creating Flask API endpoints.
@@ -72,14 +78,13 @@ Fit into any of these? Well, **WELCOME!**
 - Building configurable image processing pipelines.
 - Managing frontend state and user configuration.
 
-
 ## Installation
 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/Shamuel69/OpenCV-demo-py-react.git
-cd OpenCV-demo-py-react
+git clone https://github.com/Shamuel69/OpenCV-demo-py-react-Revisioned.git
+cd OpenCV-demo-py-react-Revisioned
 ```
 
 2. Set up the python backend:
@@ -95,7 +100,7 @@ Install the required Python packages:
 
 Start the Flask server:
 
-```bash 
+```bash
 python server/main.py
 ```
 
@@ -113,5 +118,3 @@ Start the development server:
 ```npm run dev```
 
 Vite will show you the local address to open in your browser.
-
-
