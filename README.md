@@ -2,11 +2,11 @@
 
 Welcome to CarlVision! A hands-on image processing application built to make computer vision a little less intimidating.
 
-Built with React, Python, and OpenCV. Built to be a fun, interactive lab. CarlVision allows users to experiment with common image processing techniques users would encounter in their day to day.
+Built with React, Python, and OpenCV, CarlVision provides a fun, interactive lab where users can experiment with common image processing techniques they might encounter in their day-to-day lives.
 
 ## Simple overview
 
-I wanted to make this project to give people with minimal experience in computer vision a chance to understand what and how computers see and interact with the information given to them.
+I wanted to create this project to give people with minimal experience in computer vision a chance to understand how computers see, interpret, and interact with visual information.
 
 This project is aimed toward people who struggle with OpenCV documentation, prefer a more hands-on experience, or want to test out aspects of image processing that they haven't been able to before.
 
@@ -65,8 +65,8 @@ Fit into any of these? Well, **WELCOME!**
 - Working with OpenCV image dimensions and channels.
 - Building configurable image processing pipelines.
 - Managing frontend state and user configuration.
-- Deeper understanding on mobile configurations.
-- Dragging and dropping events for the select element.
+- Improving responsive layouts and mobile configurations.
+- Implementing drag-and-drop file handling.
 
 ## Installation
 
