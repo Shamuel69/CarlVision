@@ -1,8 +1,8 @@
-# OpenCV-demo-py-react
+# CarlVision
 
-Only version 1, and I'm proud to say more is coming in future development.
+Welcome to CarlVision! A hands-on image processing application built to make computer vision a little less intimidating.
 
-I wanted to blend my Python skills with my years of experience with OpenCV and see how well they get along with my web development skills.
+Built with React, Python, and OpenCV. Built to be a fun, interactive lab. CarlVision allows users to experiment with common image processing techniques users would encounter in their day to day.
 
 ## Simple overview
 
@@ -21,16 +21,14 @@ Fit into any of these? Well, **WELCOME!**
 - Canny edge detection
 - Threshold Configuration
 - Dynamic filter Configuration
+- Live filter previews with debounced updates
 - OpenCV image processing
 - More to come in later versions!
 
 ## Future Improvements
 
-- Real-time preview while adjusting filters.
 - Additional image processing operations.
 - Image export/download functionality.
-- Improved mobile layout.
-- More advanced configuration controls.
 
 ## Technologies
 
@@ -50,24 +48,14 @@ Fit into any of these? Well, **WELCOME!**
 
 ## How This Works
 
-1. The user selects an image in the React frontend.
+1. The user selects an image, either by selecting or dragging and dropping, into the React frontend.
 2. The image and processing configuration are sent to the Flask API.
 3. Flask decodes the image using OpenCV.
 4. The configured processing operations are applied.
 5. The processed image is encoded and returned to the frontend.
 6. React displays the processed image.
 
-## How to Use
-
-1. Start the Flask backend.
-2. Start the React development server.
-3. Open the application in your browser.
-4. Upload an image.
-5. Configure the desired processing options.
-6. Submit the image.
-7. View the processed result.
-
-## Some notable experiences I gained while writing this code
+## What I learned
 
 - Connecting a React frontend to a Python backend.
 - Sending images and configuration data using FormData.
@@ -77,17 +65,22 @@ Fit into any of these? Well, **WELCOME!**
 - Working with OpenCV image dimensions and channels.
 - Building configurable image processing pipelines.
 - Managing frontend state and user configuration.
+- Deeper understanding on mobile configurations.
+- Dragging and dropping events for the select element.
 
 ## Installation
 
-1. Clone the repository:
+### 1. Clone the repository
 
 ```bash
-git clone https://github.com/Shamuel69/OpenCV-demo-py-react-Revisioned.git
-cd OpenCV-demo-py-react-Revisioned
+git clone https://github.com/Shamuel69/CarlVision.git
+cd CarlVision
 ```
 
-2. Set up the python backend:
+### 2. Set up the python backend
+
+Navigate to the server directory in the terminal and use type this:
+```cd server```
 
 Create a virtual environment:
 ```python -m venv venv```
@@ -104,17 +97,18 @@ Start the Flask server:
 python server/main.py
 ```
 
-The backend will run on:
-```http://localhost:8080```
+### 3. Set up the React frontend
 
-3. Set up the React frontend:
+Open a second terminal and navigate to the frontend:
+
+`cd CarlVision`
 
 Open a second terminal and install the frontend dependencies:
 
-```npm install```
+`npm install`
 
 Start the development server:
 
-```npm run dev```
+`npm run dev`
 
 Vite will show you the local address to open in your browser.

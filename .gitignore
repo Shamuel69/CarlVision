@@ -8,6 +8,7 @@ pnpm-debug.log*
 lerna-debug.log*
 
 client/node_modules
+client/src/assets
 client/public
 client/dist
 client/dist-ssr
