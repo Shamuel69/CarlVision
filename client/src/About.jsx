@@ -33,7 +33,7 @@ function About() {
                     <h4 className="text-2xl font-semibold">Contact</h4>
                     <div className="flex flex-col gap-2.5 ml-2.5">
                         <label>LinkedIn:</label>
-                        <a href="linkedin.com/in/sam-parnell-b616b8222" target="_blank" rel="noopener noreferrer" className="ml-2.5 hover:text-(--accent) cursor-pointer" >linkedin.com/in/sam-parnell-b616b8222</a>
+                        <a href="https://linkedin.com/in/sam-parnell-b616b8222" target="_blank" rel="noopener noreferrer" className="ml-2.5 hover:text-(--accent) cursor-pointer" >linkedin.com/in/sam-parnell-b616b8222</a>
                         <label>Business Email:</label>
                         <a href="mailto:parnellsamuel8@gmail.com?subject=CarlVisionInquiry" className="ml-2.5 hover:text-(--accent) cursor-pointer">parnellsamuel8@gmail.com</a>
 

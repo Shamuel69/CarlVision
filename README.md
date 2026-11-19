@@ -89,19 +89,19 @@ Activate it on Windows:
 ```venv\Scripts\activate```
 
 Install the required Python packages:
-```pip install -r requirements.txt```
+```pip install -r ..\requirements.txt```
 
 Start the Flask server:
 
 ```bash
-python server/main.py
+python main.py
 ```
 
 ### 3. Set up the React frontend
 
 Open a second terminal and navigate to the frontend:
 
-`cd CarlVision`
+`cd CarlVision/client`
 
 Open a second terminal and install the frontend dependencies:
 
